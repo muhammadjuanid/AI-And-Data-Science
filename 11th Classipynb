@@ -1,0 +1,318 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "caf8f774-24d6-4052-9213-a59ab43176d1",
+   "metadata": {},
+   "source": [
+    "## While Loop\n",
+    "\n",
+    "- Working on Boolean(Bool) --> True / Falsa\n",
+    "- Condition True hogi phr hei loop chalega"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "bb92a583-ad46-42fb-8f14-69d5357090f2",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a = 20\n",
+    "\n",
+    "while a < 10: #condition False hogai to ab yea nahi chalega\n",
+    "    print(a)\n",
+    "    break # Break isko rokne kay lie hai warna yea infinite chalta rhe ga"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "67a38eef-0796-4b4d-aaa6-4fc7533fa7bd",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "20\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = 20\n",
+    "\n",
+    "while a < 30: #condition true hogai to ab yea chalega\n",
+    "    print(a)\n",
+    "    break # Break isko rokne kay lie hai warna yea infinite chalta rhe ga"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "f156dbaa-4099-470c-b721-40602280b40b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "20\n",
+      "21\n",
+      "22\n",
+      "23\n",
+      "24\n",
+      "25\n",
+      "26\n",
+      "27\n",
+      "28\n",
+      "29\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = 20\n",
+    "\n",
+    "while a < 30: #condition true hogai to ab yea chalega\n",
+    "    print(a)\n",
+    "    a+=1\n",
+    "    # break # Break isko rokne kay lie hai warna yea infinite chalta rhe ga"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "38ff150d-6d98-410b-8050-dbe794ab0a63",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "4\n",
+      "9\n",
+      "16\n",
+      "25\n"
+     ]
+    }
+   ],
+   "source": [
+    "alist = [2,3,4,5,6,7,8,9,10]\n",
+    "index = 0\n",
+    "\n",
+    "while index < 4: # Yea condition True hogai\n",
+    "    print(alist[index]**2)\n",
+    "    index+=1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "b8cb6042-9f45-47fe-bee7-5826f518aa9f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "4 9 16 25 36 49 64 81 100 "
+     ]
+    }
+   ],
+   "source": [
+    "alist = [2,3,4,5,6,7,8,9,10]\n",
+    "index = 0\n",
+    "\n",
+    "while index < len(alist): # Yea condition True hogai or ab yea puri list ki length pe kam krega\n",
+    "    print(alist[index]**2, end=\" \")\n",
+    "    index+=1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d72eae54-1032-4e34-ba15-4497c6bac1f9",
+   "metadata": {},
+   "source": [
+    "#### Calculator App"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "40d3a691-4aa3-4da1-a1d4-90935499276a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a First Value 5\n",
+      "Enter a Operator +\n",
+      "Enter a Second Number 10\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "            Calculator Apps\n",
+      "    -----------------------------------------\n",
+      "        First Number : 5.0,\n",
+      "        Seconde Number : 10.0,\n",
+      "        Operator : +,\n",
+      "\n",
+      "    -----------------------------------------\n",
+      "        Result : 15.0\n",
+      "        \n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a First Value 0\n"
+     ]
+    }
+   ],
+   "source": [
+    "while True:\n",
+    "    input_number_1 = float(input(\"Enter a First Value\"))\n",
+    "    if input_number_1 == 00:\n",
+    "        break\n",
+    "    operat = input(\"Enter a Operator\")\n",
+    "    if operat == 00:\n",
+    "        break\n",
+    "    input_number_2 = float(input(\"Enter a Second Number\"))\n",
+    "    if input_number_2 == 00:\n",
+    "        break\n",
+    "        \n",
+    "    if operat == \"+\":\n",
+    "        result = input_number_1+input_number_2\n",
+    "    elif operat == \"-\":\n",
+    "        result = input_number_1-input_number_2\n",
+    "    elif operat == \"*\":\n",
+    "        result = input_number_1*input_number_2\n",
+    "    elif operat == \"/\":\n",
+    "        result = input_number_1/input_number_2\n",
+    "    elif operat == \"//\":\n",
+    "        result = input_number_1//input_number_2\n",
+    "    elif operat == \"%\":\n",
+    "        result = input_number_1%input_number_2\n",
+    "    elif operat == \"**\":\n",
+    "        result = input_number_1**input_number_2\n",
+    "    else:\n",
+    "        operat = \"Please Enter a Valid Operator\"\n",
+    "\n",
+    "\n",
+    "    print(f\"\"\"\n",
+    "            Calculator Apps\n",
+    "    -----------------------------------------\n",
+    "        First Number : {input_number_1},\n",
+    "        Seconde Number : {input_number_2},\n",
+    "        Operator : {operat},\n",
+    "\n",
+    "    -----------------------------------------\n",
+    "        Result : {result}\n",
+    "        \"\"\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8a067ece-35c2-4f5a-bfc5-7ab21943670f",
+   "metadata": {},
+   "source": [
+    "# Functions\n",
+    "\n",
+    "- python function\n",
+    "  - string\n",
+    "  - Interger\n",
+    "  - float\n",
+    "  - bool\n",
+    "  - print()\n",
+    "  - type()\n",
+    "  - len()\n",
+    "- User Define Function"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "6e43a12a-7ddd-4deb-b70f-55074ab63497",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Def say_hello():\n",
+    "\n",
+    "    # Def ---> Defination / Key Word\n",
+    "    # Say_hello() ------> is a function name\n",
+    "    # () ---> brackets kay under jo hoga wo paramater hai"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "8a70d328-3e1f-470b-852d-a7c05065806e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def say_hello():\n",
+    "    print(\"Asslam Alikum\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "5bf0b4ad-76c9-4784-93d4-9d91a928d925",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Asslam Alikum\n"
+     ]
+    }
+   ],
+   "source": [
+    "say_hello()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6b1760be-74ef-4225-b041-6bf0a4184a93",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.9"
+  },
+  "widgets": {
+   "application/vnd.jupyter.widget-state+json": {
+    "state": {},
+    "version_major": 2,
+    "version_minor": 0
+   }
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
